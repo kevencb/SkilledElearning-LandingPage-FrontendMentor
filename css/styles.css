@@ -1,0 +1,214 @@
+@import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;700;800&display=swap");
+*, ::before, ::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Plus Jakarta Sans", sans-serif;
+}
+
+/** Generales **/
+.heading-xl {
+  font-size: 5.6rem;
+  font-weight: 800;
+  line-height: 7rem;
+}
+
+.heading-l {
+  color: #13183F;
+  font-size: 4rem;
+  font-weight: 800;
+  line-height: 5.1rem;
+}
+
+.heading-m {
+  color: #13183F;
+  font-size: 3.2rem;
+  font-weight: 800;
+  line-height: 4rem;
+}
+
+.heading-s, .services .service__highlight h2 {
+  color: #13183F;
+  font-size: 2.4rem;
+  font-weight: 800;
+  line-height: 2.8rem;
+}
+
+.heading-xs {
+  color: #13183F;
+  font-size: 2rem;
+  font-weight: 800;
+  line-height: 2.55rem;
+}
+
+.body-m {
+  color: #83869A;
+  font-size: 1.8rem;
+  font-weight: 500;
+  line-height: 2.8rem;
+}
+
+.body-s {
+  color: #83869A;
+  font-size: 1.6rem;
+  font-weight: 500;
+  line-height: 2.6rem;
+}
+
+.button, .button__third-idle, .button__two-idle, .button__one-idle {
+  border: none;
+  border-radius: 2.8rem;
+  color: #ffffff;
+  font-size: 1.6rem;
+  font-weight: 400;
+  height: 4.8rem;
+  padding: 1.4rem 3.2rem;
+}
+
+.button__one-idle {
+  background-color: #13183F;
+}
+
+.button__two-idle {
+  background: linear-gradient(#FF6F48, #F02AA6);
+}
+
+.button__third-idle {
+  background: linear-gradient(#4851FF, #F02AA6);
+}
+
+.container {
+  background-color: transparent;
+  margin: 0 auto;
+  width: 90%;
+}
+
+/** Header **/
+.header {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  margin: 1.6rem auto 3.8rem;
+}
+.header__logo {
+  width: 8.9rem;
+}
+.header__logo img {
+  width: 100%;
+}
+
+.hero {
+  display: grid;
+}
+.hero h1 {
+  margin-bottom: 2.4rem;
+}
+.hero button {
+  margin: 2.4rem 0 4.6rem;
+}
+.hero__poster {
+  aspect-ratio: 1/1.1;
+  background-image: url("../assets/image-hero-mobile@2x.png");
+  background-position: top -20px center;
+  background-size: cover;
+  margin: 0;
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100%;
+}
+
+@media (min-width: 768px) {
+  .hero {
+    gap: 0;
+    grid-template-columns: 400px 1fr;
+  }
+  .hero__poster {
+    aspect-ratio: 0/0;
+    background: #4851FF;
+    background-image: url("../assets/image-hero-tablet@2x.png");
+    background-size: cover;
+    height: 90rem;
+    width: 100%;
+  }
+}
+main {
+  background: linear-gradient(180deg, #FFFFFF 0%, #F0F1FF 100%);
+  overflow: none;
+  padding-bottom: 8rem;
+}
+
+.services {
+  display: grid;
+  gap: 4.6rem;
+  overflow: hidden;
+}
+.services .service {
+  background-color: #ffffff;
+  border-radius: 1rem;
+  padding: 2.7rem 2.8rem;
+  position: relative;
+}
+.services .service__icon {
+  background: linear-gradient(#FF6F48, #F02AA6);
+  border-radius: 25rem;
+  height: 5.6rem;
+  position: absolute;
+  top: -2.8rem;
+  width: 5.6rem;
+}
+.services .service__title {
+  margin: 2.8rem 0 1.6rem;
+}
+.services .service__text {
+  margin-bottom: 2.4rem;
+}
+.services .service__link {
+  color: #F74780;
+  font-size: 1.8rem;
+  font-weight: 700;
+  line-height: 2.8rem;
+  text-decoration: none;
+}
+.services .service__highlight {
+  background: linear-gradient(#FF6F48, #F02AA6);
+}
+.services .service__highlight h2 {
+  color: #ffffff;
+  line-height: 3.2rem;
+}
+
+.footer {
+  background-color: #13183F;
+}
+.footer__info {
+  align-items: center;
+  display: flex;
+  height: 12rem;
+  justify-content: space-between;
+}
+.footer .footer__logo {
+  align-items: center;
+  display: flex;
+  height: 3.5rem;
+  width: 8.9rem;
+}
+.footer .footer__logo img {
+  margin: 0;
+  width: 8.9rem;
+}
+.footer .attribution {
+  color: #ffffff;
+  font-size: 1rem;
+  height: 4rem;
+  text-align: center;
+}
+.footer .attribution a {
+  color: #ffffff;
+}/*# sourceMappingURL=styles.css.map */

@@ -1,0 +1,233 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;700;800&display=swap');
+
+$blueLigth: #666CA3;
+$blueDark: #13183F;
+$gray: #83869A;
+$fucsia: #F74780;
+$fucsiLigth: #FFA7C3;
+$white: #ffffff;
+$degradedFucsia: #F02AA6;
+$degradedOrange: #FF6F48;
+$degradedBlue: #4851FF;
+$fontGeneral: 'Plus Jakarta Sans', sans-serif;
+
+
+*, ::before, ::after{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html{
+    font-size: 62.5%;
+}
+
+body{
+    font-family: $fontGeneral;
+}
+
+/** Generales **/
+
+.heading-xl{
+    font-size: 5.6rem;
+    font-weight: 800;
+    line-height: 7rem;
+}
+
+.heading-l{
+    color: $blueDark;
+    font-size: 4rem;
+    font-weight: 800;
+    line-height: 5.1rem;
+}
+
+.heading-m{
+    color: $blueDark;
+    font-size: 3.2rem;
+    font-weight: 800;
+    line-height: 4rem;
+}
+
+.heading-s{
+    color: $blueDark;
+    font-size: 2.4rem;
+    font-weight: 800;
+    line-height: 2.8rem;
+}
+
+.heading-xs{
+    color: $blueDark;
+    font-size: 2rem;
+    font-weight: 800;
+    line-height: 2.55rem;
+}
+
+.body-m{
+    color: $gray;
+    font-size: 1.8rem;
+    font-weight: 500;
+    line-height: 2.8rem
+}
+
+.body-s{
+    color: $gray;
+    font-size: 1.6rem;
+    font-weight: 500;
+    line-height: 2.6rem
+}
+
+.button{
+    border: none;
+    border-radius: 2.8rem ;
+    color: $white;
+    font-size: 1.6rem;
+    font-weight: 400;
+    height: 4.8rem;
+    padding: 1.4rem 3.2rem;
+}
+
+.button__one-idle{
+    background-color: $blueDark;
+    @extend .button;
+}
+
+.button__two-idle{
+    background: linear-gradient($degradedOrange, $degradedFucsia);
+    @extend .button;
+}
+
+.button__third-idle{
+    background: linear-gradient($degradedBlue, $degradedFucsia);
+    @extend .button;
+}
+
+.container{
+    background-color: transparent;
+    margin: 0 auto;
+    width: 90%;
+}
+
+/** Header **/
+
+.header{
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    margin: 1.6rem auto 3.8rem;
+    &__logo{
+        width: 8.9rem;
+        img{
+            width: 100%;
+        }
+    }
+}
+
+.hero{
+    display: grid;
+    h1{
+        margin-bottom: 2.4rem;
+    }
+    button{
+        margin: 2.4rem 0 4.6rem;
+    }
+    &__poster{
+        aspect-ratio: 1/1.1;
+        background-image: url('../assets/image-hero-mobile@2x.png');
+        background-position: top -20px center;
+        background-size: cover;
+        margin: 0;
+        object-fit: cover;
+        width: 100%;
+    }
+}
+
+@media (min-width: 768px) {
+    .hero{
+        gap:0;
+        grid-template-columns: 400px 1fr;
+        &__poster{
+            aspect-ratio: 0/0;
+            background: #4851FF;
+            background-image: url('../assets/image-hero-tablet@2x.png');
+            background-size: cover;
+            height: 90rem;
+            width: 100%;
+        }
+    }
+}
+
+main{
+    background: linear-gradient(180deg, #FFFFFF 0%, #F0F1FF 100%);
+    overflow: none;
+    padding-bottom: 8rem ;
+}
+
+.services{
+    display: grid;
+    gap: 4.6rem;
+    overflow: hidden;
+    .service{
+        background-color: $white;
+        border-radius: 1rem;
+        padding: 2.7rem 2.8rem;
+        position: relative;
+        &__icon{
+            background: linear-gradient($degradedOrange, $degradedFucsia);
+            border-radius: 25rem;
+            height: 5.6rem;
+            position: absolute;
+            top:-2.8rem;
+            width: 5.6rem;
+        }
+        &__title{
+            margin: 2.8rem 0 1.6rem;
+        }
+        &__text{
+            margin-bottom: 2.4rem;
+        }
+        &__link{
+            color: $fucsia;
+            font-size: 1.8rem;
+            font-weight: 700;
+            line-height: 2.8rem;
+            text-decoration: none;
+        }
+    }
+    .service__highlight{
+        background: linear-gradient($degradedOrange, $degradedFucsia);
+        h2{
+            color: $white;
+            line-height: 3.2rem;
+            @extend .heading-s;
+        }
+    }
+}
+
+.footer{
+    background-color: $blueDark;
+    &__info{
+        align-items: center;
+        display: flex;
+        height: 12rem;
+        justify-content: space-between;
+    }
+    .footer__logo{
+        align-items: center;
+        display: flex;
+        height: 3.5rem;
+        width: 8.9rem;
+        img{
+            margin: 0;
+            width: 8.9rem;
+        }
+    }
+    .attribution{
+        color: $white;
+        font-size: 1rem;
+        height: 4rem;
+        text-align: center;
+        a{
+            color: $white;
+        }
+    }
+}
