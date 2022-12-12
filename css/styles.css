@@ -11,6 +11,7 @@ html {
 
 body {
   font-family: "Plus Jakarta Sans", sans-serif;
+  overflow-x: hidden;
 }
 
 /** Generales **/
@@ -50,7 +51,7 @@ body {
 
 .body-m {
   color: #83869A;
-  font-size: 1.8rem;
+  font-size: 1.6rem;
   font-weight: 500;
   line-height: 2.8rem;
 }
@@ -126,16 +127,22 @@ body {
 
 @media (min-width: 768px) {
   .hero {
-    gap: 0;
-    grid-template-columns: 400px 1fr;
+    align-items: center;
+    grid-template-columns: 40rem 64rem;
+    margin: 0rem auto 9.6rem;
+    max-height: auto;
+    position: relative;
   }
   .hero__poster {
-    aspect-ratio: 0/0;
-    background: #4851FF;
+    aspect-ratio: 1/1;
     background-image: url("../assets/image-hero-tablet@2x.png");
-    background-size: cover;
-    height: 90rem;
-    width: 100%;
+    background-position: bottom left;
+    background-size: contain;
+    float: right;
+    margin-left: -3rem;
+    margin-top: -18rem;
+    position: relative;
+    z-index: -1;
   }
 }
 main {
@@ -147,7 +154,6 @@ main {
 .services {
   display: grid;
   gap: 4.6rem;
-  overflow: hidden;
 }
 .services .service {
   background-color: #ffffff;
@@ -160,7 +166,7 @@ main {
   border-radius: 25rem;
   height: 5.6rem;
   position: absolute;
-  top: -2.8rem;
+  top: -1.8rem;
   width: 5.6rem;
 }
 .services .service__title {
@@ -184,6 +190,14 @@ main {
   line-height: 3.2rem;
 }
 
+@media (min-width: 768px) {
+  .services {
+    -moz-column-gap: 1rem;
+         column-gap: 1rem;
+    grid-template-columns: 1fr 1fr;
+    row-gap: 5.6rem;
+  }
+}
 .footer {
   background-color: #13183F;
 }
