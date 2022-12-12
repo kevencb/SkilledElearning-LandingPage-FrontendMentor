@@ -20,6 +20,7 @@ $fontGeneral: 'Plus Jakarta Sans', sans-serif;
 
 html{
     font-size: 62.5%;
+    overflow-x: hidden;
 }
 
 body{
@@ -30,6 +31,7 @@ body{
 /** Generales **/
 
 .heading-xl{
+    color: $blueDark;
     font-size: 5.6rem;
     font-weight: 800;
     line-height: 7rem;
@@ -40,6 +42,13 @@ body{
     font-size: 4rem;
     font-weight: 800;
     line-height: 5.1rem;
+}
+
+@media (min-width: 1080px) {
+    .heading-l{
+       font-size: 5.6rem;
+       line-height: 7rem;
+    }
 }
 
 .heading-m{
@@ -70,6 +79,12 @@ body{
     line-height: 2.8rem
 }
 
+@media (min-width: 768px) {
+    .body-m{
+        font-size: 1.8rem;
+    }
+}
+
 .body-s{
     color: $gray;
     font-size: 1.6rem;
@@ -81,6 +96,7 @@ body{
     border: none;
     border-radius: 2.8rem ;
     color: $white;
+    cursor: pointer;
     font-size: 1.6rem;
     font-weight: 400;
     height: 4.8rem;
@@ -102,9 +118,15 @@ body{
     @extend .button;
 }
 
+.button__one-idle:hover, .button__two-idle:hover, .button__third-idle:hover{
+    cursor: pointer;
+    opacity: 0.6;
+}
+
 .container{
     background-color: transparent;
     margin: 0 auto;
+    max-width: 110rem;
     width: 90%;
 }
 
@@ -122,6 +144,19 @@ body{
         }
     }
 }
+
+@media (min-width: 768px) {
+    .header{
+        margin: 2.4rem auto 3.8rem;
+    }
+}
+
+@media (min-width: 1080px) {
+    .header{
+        margin: 2.4rem auto 8.8rem;
+    }
+}
+
 
 .hero{
     display: grid;
@@ -145,20 +180,39 @@ body{
 @media (min-width: 768px) {
     .hero{
         align-items: center;
-        grid-template-columns: 40rem 64rem;
-        margin: 0rem auto 9.6rem;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 2fr;
+        height: 28.4rem;
+        margin: 10rem auto 0;
         max-height: auto;
         position: relative;
         &__poster{
             aspect-ratio: 1/1;
             background-image: url('../assets/image-hero-tablet@2x.png');
-            background-position: bottom left;
+            background-position: center;
             background-size: contain;
-            float: right;
-            margin-left: -3rem;
-            margin-top: -18rem;
-            position: relative;
+            position: absolute;
+            right:0;
+            transform: translate(50%,-9%);
             z-index: -1;
+        }
+    }
+}
+
+@media (min-width: 1080px) {
+    .hero{
+        display: grid;
+        grid-template-columns: 46rem 2fr;
+        grid-template-rows: 2fr;
+        height: 60rem;
+        &__poster{
+            aspect-ratio: 1/1;
+            background-image: url('../assets/image-hero-desktop@2x.png');
+            background-position: right top;
+            grid-row: 1/-1;
+            position: absolute;
+            right:0;
+            transform: translate(50%,-7.5rem);
         }
     }
 }
@@ -213,8 +267,17 @@ main{
     .services{
         column-gap: 1rem;
         grid-template-columns: 1fr 1fr;
-        // margin-top: 20rem;
+        margin-top: 18rem;
         row-gap: 5.6rem;
+    }
+}
+
+@media (min-width: 1080px) {
+    .services{
+        column-gap: 3rem;
+        grid-template-columns: 1fr 1fr 1fr;
+        margin-top: 13rem;
+        row-gap: 8rem;
     }
 }
 
